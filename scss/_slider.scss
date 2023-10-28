@@ -1,0 +1,173 @@
+.first-screen {
+    position: relative;
+
+
+    &__content {
+        position: absolute;
+        top: 97px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        width: 100%;
+    }
+
+    &__slider {
+        position: relative;
+
+
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+
+    }
+
+
+}
+
+.slick-dots {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    position: absolute;
+    left: 43%;
+    top: 70%;
+    transform: translateY(-50%);
+
+
+    li {
+        &.slick-active {
+            button {
+                background-color: #e7d63e;
+            }
+        }
+    }
+
+
+
+    button {
+        font-size: 0;
+        background: none;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: 1px solid #eff4f7;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+.news__slider {
+    position: relative;
+}
+
+.news__slider .slick-track {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width: 320px) {
+        gap: 3px;
+    }
+
+}
+
+
+
+.news__slider .slick-dots {
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 550px;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    font-size: 0;
+
+
+    &::before {
+        content: url(../img/arrowleft.svg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+}
+
+.slick-prev {
+    left: -60px;
+}
+
+.slick-next {
+    left: none;
+    right: -60px;
+
+    &::before {
+        content: url(../img/arrowright.svg);
+    }
+
+
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+
+
+    .slick-dots {
+        flex-direction: row;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slick-dots {
+        left: 50%;
+        top: 74%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slick-dots {
+        left: 50%;
+        top: 70%;
+
+        button {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .slick-dots {
+        left: 50%;
+        top: 60%;
+
+        button {
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
